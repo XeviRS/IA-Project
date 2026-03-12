@@ -1,5 +1,17 @@
 # 🚴 Safe Bike — Seguretat Intel·ligent per a Ciclistes
 
+## 💡 Origen del Projecte
+
+Fa unes setmanes el meu pare va viatjar a Lanzarote per fer un *staff* esportiu amb l’equip del Centre Natació Mataró. Durant aquells dies van combinar entrenaments de **natació i bicicleta** aprofitant les condicions de l’illa.
+
+Quan va tornar, parlant sobre l’experiència, em va dir: *“Per què no t’animes a fer bicicleta?”*.
+
+La idea em va semblar interessant, però immediatament vaig pensar en una cosa: **no tots els llocs transmeten la mateixa sensació de seguretat quan vas en bici**. Depenent de la ruta, el trànsit, la meteorologia o fins i tot l’hora del dia, la percepció de risc pot canviar molt.
+
+D’aquesta reflexió neix **Safe Bike**: la idea d’utilitzar **intel·ligència artificial i dades en temps real** per analitzar múltiples factors d’una ruta i oferir una **puntuació de seguretat personalitzada per a cada ciclista**.
+
+L’objectiu és simple: ajudar a prendre decisions més informades abans de sortir a pedalar.
+
 Demo web interactiva de **Safe Bike**, una aplicació de seguretat per a ciclistes basada en Intel·ligència Artificial que analitza més de 100 paràmetres en temps real per oferir una puntuació de seguretat personalitzada.
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
