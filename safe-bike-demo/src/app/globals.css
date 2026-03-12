@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --navy: #1a2b5f;
+  --navy-dark: #0d1533;
+  --accent-blue: #2196F3;
+  --accent-cyan: #00BCD4;
+  --accent-green: #4CAF50;
+  --accent-orange: #FF9800;
+  --accent-red: #F44336;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600;
+  }
+
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-navy-800/80 backdrop-blur-lg border border-white/10;
+  }
+}
+
+/* Safety score ring animation */
+.score-ring {
+  transition: stroke-dashoffset 2s ease-out;
+}
+
+/* Leaflet overrides */
+.leaflet-container {
+  border-radius: 16px;
+  z-index: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1533;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2196F3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1976D2;
+}
+
+/* Animated background gradient */
+.animated-bg {
+  background: linear-gradient(-45deg, #0d1533, #1a2b5f, #162350, #111c42);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Particle effect for hero */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(33, 150, 243, 0.6);
+  border-radius: 50%;
+  animation: particleFloat 8s infinite;
+}
+
+@keyframes particleFloat {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+}
+
+/* Icon selector active state */
+.icon-btn {
+  @apply p-3 rounded-xl border-2 border-gray-200 cursor-pointer transition-all duration-300 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20;
+}
+
+.icon-btn.active {
+  @apply border-blue-500 bg-blue-500 text-white shadow-lg shadow-blue-500/30;
+}
+
+/* Route card hover */
+.route-card {
+  @apply transition-all duration-500;
+}
+
+.route-card:hover {
+  @apply -translate-y-2 shadow-2xl;
+}
+
+/* Pulsing dot */
+.pulse-dot {
+  position: relative;
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: #4CAF50;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(76, 175, 80, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+}
+
+/* Parameter bar animation */
+@keyframes barGrow {
+  from { width: 0%; }
+}
+
+.bar-animated {
+  animation: barGrow 1.5s ease-out forwards;
+}
